@@ -20,6 +20,18 @@ class ViewController: UIViewController, UITableViewDataSource {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshPosts), for: .valueChanged)
         tableView.refreshControl = refreshControl
+
+        // Set navigation bar title
+        title = "Blog Posts"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+
+    // Deselects the tapped row when you come back from the detail screen
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedIndexPath, animated: animated)
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,9 +44,26 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.summaryLabel.text = post.summary
         if let photo = post.photos.first {
             let url = photo.originalSize.url
-            NukeExtensions.loadImage(with: url, into: cell.postImageView)        }
+            NukeExtensions.loadImage(with: url, into: cell.postImageView)
+        }
         return cell
     }
+
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
+
+        let selectedPost = posts[selectedIndexPath.row]
+
+        guard let detailViewController = segue.destination as? DetailViewController else { return }
+
+
+        detailViewController.post = selectedPost
+    }
+
+    // MARK: - Networking
 
     func fetchPosts() {
         let url = URL(string: "https://api.tumblr.com/v2/blog/tumbirbs/posts/photo?api_key=1zT8CiXGXFcQDyMFG7RtcfGLwTdDjFUJnZzKJaWTmgyK4lKGYk")!
@@ -65,6 +94,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         session.resume()
     }
+
     @objc func refreshPosts() {
         fetchPosts()
         tableView.refreshControl?.endRefreshing()

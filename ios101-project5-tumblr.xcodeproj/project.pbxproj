@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		078AC7A22F5FB32900C89E62 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078AC7A12F5FB32900C89E62 /* PostCell.swift */; };
+		078AC7A42F70B45600C89E62 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078AC7A32F70B45600C89E62 /* DetailViewController.swift */; };
+		078AC7A62F70B46400C89E62 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078AC7A52F70B46400C89E62 /* String+Extensions.swift */; };
 		ED59161029BC307D000F25AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED59160F29BC307D000F25AE /* AppDelegate.swift */; };
 		ED59161229BC307D000F25AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED59161129BC307D000F25AE /* SceneDelegate.swift */; };
 		ED59161429BC307D000F25AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED59161329BC307D000F25AE /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		078AC7A12F5FB32900C89E62 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		078AC7A32F70B45600C89E62 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		078AC7A52F70B46400C89E62 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		ED59160C29BC307D000F25AE /* ios101-project5-tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios101-project5-tumblr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED59160F29BC307D000F25AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED59161129BC307D000F25AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 				ED59161329BC307D000F25AE /* ViewController.swift */,
 				ED59162329BC4921000F25AE /* Post.swift */,
 				ED59161529BC307D000F25AE /* Main.storyboard */,
+				078AC7A32F70B45600C89E62 /* DetailViewController.swift */,
+				078AC7A52F70B46400C89E62 /* String+Extensions.swift */,
 				ED59161829BC307E000F25AE /* Assets.xcassets */,
 				ED59161A29BC307E000F25AE /* LaunchScreen.storyboard */,
 				ED59161D29BC307E000F25AE /* Info.plist */,
@@ -162,8 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED59161429BC307D000F25AE /* ViewController.swift in Sources */,
+				078AC7A62F70B46400C89E62 /* String+Extensions.swift in Sources */,
 				ED59161029BC307D000F25AE /* AppDelegate.swift in Sources */,
 				ED59161229BC307D000F25AE /* SceneDelegate.swift in Sources */,
+				078AC7A42F70B45600C89E62 /* DetailViewController.swift in Sources */,
 				ED59162429BC4921000F25AE /* Post.swift in Sources */,
 				078AC7A22F5FB32900C89E62 /* PostCell.swift in Sources */,
 			);
