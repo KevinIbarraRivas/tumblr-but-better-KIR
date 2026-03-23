@@ -23,7 +23,10 @@ class ViewController: UIViewController, UITableViewDataSource {
 
         // Set navigation bar title
         title = "Blog Posts"
+        navigationItem.largeTitleDisplayMode = .never
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        
     }
 
     // Deselects the tapped row when you come back from the detail screen
