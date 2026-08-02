@@ -1,29 +1,3 @@
-# Project 6 - Tumblr BIRB
-
-Submitted by: Kevin Ibarra Ribas
-
-Tumblr BIRB is an app that displays a feed of blog posts from Tumblr and allows users to tap on any post to navigate to a detail screen showing the full image and caption.
-
-Time spent: 8 hours spent in total
-
-## Required Features
-
-The following **required** functionality is completed:
-
-- [x] Setup navigation to the Detail Screen
-- [x] Created the Detail View UI
-- [x] Add the ability to pass data to the Detail View Controller
-- [x] Made personal finishing touches to the UI
-
-The following **additional** features are implemented:
-
-- [x] Pull to refresh on the main feed
-- [x] Large title display on the Blog Posts screen that collapses on scroll
-- [x] Row deselects automatically when navigating back from detail screen
-- [x] Caption HTML tags are stripped for clean text display
-
-## Video Walkthrough
-
 <div>
     <a href="https://www.loom.com/share/b9cfdf8a1ee34948af042006a5410686">
     </a>
@@ -32,22 +6,29 @@ The following **additional** features are implemented:
     </a>
   </div>
 
-## Notes
+# Tumblr BIRB
 
-The main challenges encountered while building the app were setting up the storyboard correctly — specifically embedding the existing view controller in a Navigation Controller, creating the segue from the PostCell to the Detail View Controller, and connecting the IBOutlets in the Assistant Editor.
+An iOS app that displays a feed of Tumblr blog posts — tap any post to open a detail screen with the full image and caption. Built in Swift.
+
+## Features
+
+- Scrollable feed of blog posts
+- Detail screen for each post with the full image and caption
+- Pull to refresh on the main feed
+- Large title on the feed that collapses as you scroll
+- Rows deselect automatically when you navigate back
+- Captions have their HTML tags stripped for clean display
+
+## What I learned
+
+Most of the challenge was in the storyboard: embedding the existing view controller in a Navigation Controller, creating the segue from the post cell to the detail view controller, and connecting the IBOutlets through the Assistant Editor.
+
+## Running it
+
+1. Clone the repo
+2. Open `ios101-project5-tumblr.xcodeproj` in Xcode
+3. Build and run
 
 ## License
 
-    Copyright 2025 Kevin Ibarra Rivas
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+Apache 2.0 — see LICENSE for details.
